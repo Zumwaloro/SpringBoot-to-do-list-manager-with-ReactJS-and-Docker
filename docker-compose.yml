@@ -1,0 +1,11 @@
+version: '3'
+services:
+    server:
+      build: ./target
+      ports:
+          - "8080:8080"
+    client:
+      stdin_open: true
+      build: ./src/main/web/manager-client
+      ports:
+          - "3000:3000"
